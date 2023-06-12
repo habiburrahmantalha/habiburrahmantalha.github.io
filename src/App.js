@@ -1,24 +1,52 @@
 import logo from './logo.svg';
-import './App.css';
+import AOS from "aos";
 
+import './App.css';
+import {Navbar} from "./Components/Navbar/Navbar";
+import {Landing} from "./Components/Landing/Landing";
+import {AboutMe} from "./Components/AboutMe/AboutMe";
+import {TechIKnow} from "./Components/TechIKnow/TechIKnow";
+import {Experience} from "./Components/Experience/Experience";
+import {Projects} from "./Components/Projects/Projects";
+import {Contact} from "./Components/Contact/Contact";
+import { Layout, Space } from 'antd';
+import "aos/dist/aos.css";
+import "./App.less";
+import {useEffect} from "react";
+const { Header, Footer, Sider, Content } = Layout;
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <Layout>
+              <Header style={{
+                  position: 'sticky',
+                  top: 0,
+                  zIndex: 1,
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+              }}>
+                  <Navbar />
+              </Header>
+              <Content>
+                  <div>
+                      <Landing />
+                      <AboutMe />
+                      <TechIKnow />
+                      <Experience />
+                      <Projects />
+                      <Contact />
+                  </div>
+              </Content>
+          </Layout>
+
+
+
+      </div>
   );
 }
 
