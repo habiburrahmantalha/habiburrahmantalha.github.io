@@ -1,0 +1,93 @@
+.education-card {
+  background: #141414;
+  background: var(--surface, #141414);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  transition: border-color 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: var(--accent);
+}
+
+.education-degree {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.education-institution {
+  font-size: 16px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.education-meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.meta-dot {
+  opacity: 0.5;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.achievement-card {
+  background: #141414;
+  background: var(--surface, #141414);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.achievement-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+}
+
+.achievement-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.achievement-title a:hover {
+  color: var(--accent);
+}
+
+.achievement-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 702px) {
+  .education-degree {
+    font-size: 17px;
+  }
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

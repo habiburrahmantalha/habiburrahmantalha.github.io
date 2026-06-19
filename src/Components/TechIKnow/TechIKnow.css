@@ -1,83 +1,62 @@
-.techiknow-heading {
-  border-bottom: 2px solid rgb(168, 164, 164);
-}
-.frameworks,
-.devops,
-.database,
-.languages {
+.techiknow-intro {
+  color: var(--text-muted);
   font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 600px;
 }
-.techiknow-first,
-.techiknow-second,
-.techiknow-third {
-  color: rgb(168, 164, 164);
-  font-size: 16px;
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
-@media screen and (min-width: 3840px) {
-  .techiknow-heading {
-    font-size: 40px;
-  }
-  .techiknow-first,
-  .techiknow-second,
-  .techiknow-third,
-  .frameworks,
-  .devops,
-  .database,
-  .languages {
-    font-size: 26px;
-  }
-  .frameworks-heading,
-  .devops-heading,
-  .database-heading,
-  .languages-heading {
-    font-size: 34px;
-  }
+
+.skill-category {
+  background: #141414;
+  background: var(--surface, #141414);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.3s ease;
 }
-@media screen and (min-width: 1178px) and (max-width: 1330px) {
-  .techiknow-first,
-  .techiknow-second,
-  .techiknow-third {
-    font-size: 15px;
-  }
+
+.skill-category:hover {
+  border-color: var(--accent);
 }
-@media screen and (min-width: 1050px) and (max-width: 1178px) {
-  .techiknow-first,
-  .techiknow-second,
-  .techiknow-third {
-    font-size: 11px;
-  }
-  .frameworks-heading,
-  .devops-heading,
-  .database-heading,
-  .languages-heading {
-    font-size: 17px;
-  }
-  .frameworks,
-  .devops,
-  .database,
-  .languages {
-    font-size: 12px;
-  }
-  .techiknow-heading {
-    font-size: 25px;
-  }
+
+.skill-category-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 16px 0;
+  font-family: "SF Mono", "Fira Code", monospace;
 }
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(100, 255, 218, 0.06);
+}
+
 @media screen and (max-width: 702px) {
-  .techiknow-first,
-  .techiknow-second,
-  .techiknow-third,
-  .frameworks,
-  .devops,
-  .database,
-  .languages {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 474px) {
-  .techiknow-first,
-  .techiknow-second,
-  .techiknow-third {
-    font-size: 14px;
-    margin-top: -10px;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -4,129 +4,80 @@ import {
   GithubFilled,
   InstagramOutlined,
   MailFilled,
+  PhoneFilled,
 } from "@ant-design/icons";
-import Typed from "react-typed";
 import "./Contact.css";
-import "react-typed/dist/animatedCursor.css";
+
 export const Contact = () => {
   return (
-    <div id="contact" style={{paddingTop: 0, backgroundColor: "black"}}>
-      <Row style={{ marginTop: "37vh" }}>
-        <Col xxl={6} xl={6} lg={3} xs={2} md={3} sm={3} />
-        <Col
-          xxl={12}
-          xl={12}
-          lg={18}
-          xs={20}
-          md={18}
-          sm={18}
-          style={{ textAlign: "left" }}
-        >
-          <h1 className="contact-header">
-            <Typed
-              style={{
-                hyphens: "auto",
-                overflowWrap: "break-word",
-                wordWrap: "break-word",
-                  color: "white"
-              }}
-              strings={[
-                "Let's get in touch. . .",
-              ]}
-              typeSpeed={40}
-            />
-          </h1>
-        </Col>
-        <Col xxl={6} xl={6} lg={3} xs={2} md={3} sm={2} />
-      </Row>
-      <br />
-      <br />
-      <br />
-      <br />
+    <div id="contact" className="contact-section">
       <Row>
-        <Col xxl={6} xl={6} lg={3} xs={1} md={3} sm={3} />
-        <Col xxl={12} xl={12} lg={18} xs={22} md={18} sm={18}>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "100px",
-            }}
-            className="links-wrapper"
-          >
-            <div
-              data-aos="fade"
-              data-aos-delay="250"
-              data-aos-once
-              className="contact-container linkedin-wrapper"
+        <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
+        <Col xxl={14} xl={14} lg={18} xs={20} md={18} sm={18}>
+          <h2 className="section-label contact-label" data-aos="fade-up" data-aos-once>
+            06. Get In Touch
+          </h2>
+          <p className="contact-text" data-aos="fade-up" data-aos-once>
+            I'm currently open to new opportunities. Whether you have a question, a project idea,
+            or just want to say hi — my inbox is always open.
+          </p>
+          <p className="contact-email" data-aos="fade-up" data-aos-once>
+            <a href="mailto:habiburrahmantalha@gmail.com">habiburrahmantalha@gmail.com</a>
+          </p>
+
+          <div className="links-wrapper" data-aos="fade-up" data-aos-delay="200" data-aos-once>
+            <a
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/habiburrahmantalha/"
+              aria-label="LinkedIn"
             >
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/habiburrahmantalha/"
-              >
-                <LinkedinFilled
-                  className="linkedin-image"
-                  style={{ color: "white" }}
-                />
-              </a>
-            </div>
-            <div
-              data-aos="fade"
-              data-aos-delay="750"
-              data-aos-once
-              className="contact-container gmail-wrapper"
+              <LinkedinFilled />
+            </a>
+            <a
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+              href="mailto:habiburrahmantalha@gmail.com"
+              aria-label="Email"
             >
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="mailto:habiburrahmantalha@gmail.com"
-              >
-                <MailFilled
-                  className="gmail-image"
-                  style={{ color: "white" }}
-                />
-              </a>
-            </div>
-            <div
-              data-aos="fade"
-              data-aos-delay="500"
-              data-aos-once
-              className="contact-container github-wrapper"
+              <MailFilled />
+            </a>
+            <a
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/habiburrahmantalha"
+              aria-label="GitHub"
             >
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/habiburrahmantalha"
-              >
-                <GithubFilled
-                  className="github-image"
-                  style={{ color: "white" }}
-                />
-              </a>
-            </div>
-            <div
-              data-aos="fade"
-              data-aos-delay="1000"
-              data-aos-once
-              className="contact-container instagram-wrapper"
+              <GithubFilled />
+            </a>
+            <a
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+              href="tel:+8801755529398"
+              aria-label="Phone"
             >
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.instagram.com/habiburrahmantalha/"
-              >
-                <InstagramOutlined
-                  className="instagram-image"
-                  style={{ color: "white" }}
-                />
-              </a>
-            </div>
+              <PhoneFilled />
+            </a>
+            <a
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/habiburrahmantalha/"
+              aria-label="Instagram"
+            >
+              <InstagramOutlined />
+            </a>
           </div>
+
+          <p className="contact-footer" data-aos="fade-up" data-aos-once>
+            Built by Md. Habibur Rahman · Dhaka, Bangladesh
+          </p>
         </Col>
-        <Col xxl={6} xl={6} lg={3} xs={1} md={3} sm={2} />
+        <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
       </Row>
     </div>
   );

@@ -1,59 +1,97 @@
-@keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  gap: 24px;
+}
+
+.navbar-brand {
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #64ffda !important;
+  text-decoration: none;
+  font-family: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+  letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+  color: #4fd1b0 !important;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #d4d4d4 !important;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: #64ffda !important;
+  background-color: rgba(100, 255, 218, 0.08);
+}
+
+.nav-item-cta {
+  color: #000000 !important;
+  background-color: #64ffda;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.nav-item-cta:hover {
+  color: #000000 !important;
+  background-color: #4fd1b0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    gap: 12px;
+    padding: 0 4px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .nav-item {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .nav-item-cta {
+    padding: 6px 12px;
   }
 }
-@keyframes fill {
-  from {
-    fill: transparent;
+
+@media screen and (max-width: 480px) {
+  .navbar-nav {
+    gap: 2px;
   }
-  to {
-    fill: white;
-  }
-}
-#logo path:nth-child(1) {
-  stroke-dasharray: 549.0669555664062;
-  stroke-dashoffset: 549.0669555664062;
-  animation: line-anim 2s ease forwards;
-}
-#logo {
-  animation: fill 0.4s ease forwards 1.2s;
-}
-.link {
-  font-size: 16px;
-}
-@media screen and (min-width: 3840px) {
-  .link {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 1520px) {
-  .link {
-    font-size: 17px;
-  }
-}
-@media screen and (max-width: 1450px) {
-  .link {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .link {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 1359px) {
-  .link {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 502px) {
-  .nav {
-    margin-left: 50%;
-  }
-}
-@media screen and (max-width: 492px) {
-  .nav {
-    margin-top: -70px;
+
+  .nav-item {
+    padding: 6px 8px;
+    font-size: 12px;
   }
 }

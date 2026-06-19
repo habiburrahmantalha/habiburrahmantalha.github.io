@@ -1,133 +1,69 @@
-.linkedin-image {
-  font-size: 60px;
+.contact-section {
+  padding: 100px 0 80px;
+  text-align: center;
+  border-top: 1px solid var(--border);
 }
-.github-image {
-  font-size: 60px;
+
+.contact-label {
+  text-align: center;
 }
-.instagram-image {
-  font-size: 65px;
+
+.contact-text {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 24px;
 }
-.gmail-image {
-  font-size: 65px;
-  margin-top: 5px;
+
+.contact-email {
+  margin-bottom: 40px;
 }
-.contact-container {
-  width: 25%;
-  float: left;
+
+.contact-email a {
+  font-size: clamp(18px, 3vw, 28px);
+  color: var(--accent);
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", monospace;
+  transition: opacity 0.2s ease;
 }
-@media screen and (min-width: 3840px) {
-  .contact-header {
-    font-size: 45px;
-    margin-left: 5%;
-  }
-  .links-wrapper {
-    margin-left: -10%;
-  }
-  .contact-container {
-    width: 15%;
-    float: left;
-  }
+
+.contact-email a:hover {
+  opacity: 0.8;
 }
-@media screen and (max-width: 1630px) {
-  .linkedin-image {
-    font-size: 50px;
-  }
-  .github-image {
-    font-size: 50px;
-  }
-  .instagram-image {
-    font-size: 65px;
-  }
-  .gmail-image {
-    font-size: 55px;
-    margin-top: 5px;
-  }
-  .contact-container {
-    width: 25%;
-    float: left;
-  }
+
+.links-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 1105px) {
-  .linkedin-image {
-    font-size: 40px;
-  }
-  .github-image {
-    font-size: 40px;
-  }
-  .instagram-image {
-    font-size: 55px;
-  }
-  .gmail-image {
-    font-size: 40px;
-    margin-top: -3px;
-  }
-  .contact-container {
-    width: 25%;
-    float: left;
-  }
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-secondary) !important;
+  font-size: 22px;
+  background: #141414 !important;
+  background: var(--surface, #141414) !important;
+  transition: all 0.3s ease;
 }
-@media screen and (min-width: 1050px) and (max-width: 1178px) {
-  .contact-header {
-    font-size: 25px;
-  }
+
+.social-link:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(100, 255, 218, 0.15);
 }
-@media screen and (max-width: 993px) {
-  .contact-header {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 970px) {
-  .linkedin-image {
-    font-size: 40px;
-  }
-  .github-image {
-    font-size: 40px;
-  }
-  .instagram-image {
-    font-size: 55px;
-  }
-  .gmail-image {
-    font-size: 40px;
-    margin-top: 5px;
-  }
-  .contact-container {
-    width: 25%;
-    float: left;
-  }
-}
-@media screen and (max-width: 769px) {
-  .linkedin-image {
-    font-size: 40px;
-  }
-  .github-image {
-    font-size: 40px;
-  }
-  .instagram-image {
-    font-size: 55px;
-  }
-  .gmail-image {
-    font-size: 40px;
-  }
-  .contact-container {
-    width: 25%;
-    float: left;
-  }
-}
-@media screen and (max-width: 609px) {
-  .contact-header {
-    font-size: 20px;
-  }
-  .instagram-image {
-    font-size: 45px;
-  }
-}
-@media screen and (max-width: 483px) {
-  .gmail-image {
-    font-size: 40px;
-    margin-top: 0px;
-  }
-  .contact-container {
-    width: 25%;
-    float: left;
-  }
+
+.contact-footer {
+  font-size: 13px;
+  color: var(--text-muted);
+  opacity: 0.6;
 }

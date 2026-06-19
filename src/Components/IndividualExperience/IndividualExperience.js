@@ -1,138 +1,47 @@
 import { Row, Col } from "antd";
 
 export const IndividualExperience = ({
-  marginTop,
+  index,
   company,
   link,
   role,
-  brief, time, location,
-
-  report = null,
-  youtubeLink = null,
+  brief,
+  time,
+  location,
 }) => {
-
   return (
-    <>
-      <Row style={{ marginTop: marginTop }}>
-        <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
-        <Col
-          xxl={5}
-          xl={5}
-          lg={18}
-          xs={10}
-          md={18}
-          sm={18}
-          style={{ textAlign: "left" }}
-        >
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="0"
-            data-aos-once
-            style={{
-              //textDecoration: "underline",
-              textDecorationColor: "rgb(0,0,0)",
-            }}
-            className={`${company
-              .replace(",", "")
-              .split(" ")[0]
-              .toLowerCase()}-heading`}
-          >
-            <b>
-              <a
-                style={{ color: "rgb(0,0,0)" }}
-                href={link}
-                target="_blank"
-                rel="noreferrer"
-
-              >
-                {company}
-              </a>
-            </b>
-          </h1>
-          <h4>
-            {time}
-          </h4>
-          <h5>
-            {location}
-          </h5>
-        </Col>
-        <Col lg={4} />
-      </Row>
+    <div className="experience-item" data-aos="fade-up" data-aos-delay={index * 50} data-aos-once>
       <Row>
         <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
-        <Col
-          xxl={12}
-          xl={12}
-          lg={18}
-          xs={20}
-          md={18}
-          sm={18}
-          style={{ textAlign: "left" }}
-        >
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="0"
-            data-aos-once
-            className="role-heading"
-            style={{
-              // textDecoration: "underline",
-              textDecorationColor: "rgb(168, 164, 164)",
-            }}
-          >
-            <b>{role}</b>
-          </h1>
-          <ul
-            data-aos="fade-up"
-            data-aos-delay="0"
-            data-aos-once
-            style={{ color: "rgb(168, 164, 164)" }}
-          >
-            {brief.map((listItem, index) => {
-              return (
-                <li key={`${index}-individualExperience`} className="list">
-                  {listItem}
-                </li>
-              );
-            })}
-            {report && (
-              <li className="list">
-                Press{" "}
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "rgb(168, 164, 164)" }}
-                  href={report}
-                >
-                  {" "}
-                  <u>
-                    {" "}
-                    <b>me</b>{" "}
-                  </u>{" "}
-                </a>{" "}
-                to read a detailed report of the project
-              </li>
-            )}
-            {youtubeLink && (
-              <li className="list">
-                Checkout my work
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "rgb(168, 164, 164)" }}
-                  href={youtubeLink}
-                >
-                  {" "}
-                  <u>
-                    {" "}
-                    <b>here</b>{" "}
-                  </u>{" "}
-                </a>{" "}
-              </li>
-            )}
-          </ul>
+        <Col xxl={14} xl={14} lg={18} xs={20} md={18} sm={18}>
+          <div className="exp-card">
+            <div className="exp-header">
+              <div className="exp-header-left">
+                <h3 className="exp-company">
+                  {link ? (
+                    <a href={link} target="_blank" rel="noreferrer">
+                      {company} ↗
+                    </a>
+                  ) : (
+                    company
+                  )}
+                </h3>
+                <p className="exp-role">{role}</p>
+              </div>
+              <div className="exp-header-right">
+                <span className="exp-time">{time}</span>
+                <span className="exp-location">{location}</span>
+              </div>
+            </div>
+            <ul className="exp-brief">
+              {brief.map((listItem, i) => (
+                <li key={`${index}-${i}`}>{listItem}</li>
+              ))}
+            </ul>
+          </div>
         </Col>
-        <Col xxl={7} xl={7} lg={3} xs={2} md={3} sm={3} />
+        <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
       </Row>
-    </>
+    </div>
   );
 };
